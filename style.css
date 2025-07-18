@@ -1,0 +1,122 @@
+:root {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.page__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1600px;
+    padding: 60px;
+}
+
+.featured-house {
+    display: flex;
+    justify-content: center;
+}
+
+.featured-house__houses {
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.house-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.house-card__info {
+    display: block;
+}
+
+.house-card__img-container {
+    width: 340px;
+    height: 382px;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.house-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.people-card__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.people-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.house-for-sale__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.house-for-sale__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.house-for-sale__image-container {
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.house-for-sale__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.house-for-sale__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    white-space: nowrap;
+}
+
+.house-for-sale__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 550px;
+}
+
+@media (max-width: 1500px) {
+    .featured-house__houses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-house__houses {
+        grid-template-columns: 1fr;
+    }
+
+    .house-for-sale__container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
