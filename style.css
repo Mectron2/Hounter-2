@@ -40,8 +40,8 @@
 }
 
 .house-card__img-container {
-    width: 340px;
     height: 382px;
+    max-width: 340px;
     overflow: hidden;
     border-radius: 10%;
 }
@@ -77,9 +77,14 @@
     font-weight: 600;
 }
 
-.house-for-sale__image-container {
-    width: 450px;
+.house-for-sale__images {
     height: 450px;
+    max-width: 450px;
+}
+
+.house-for-sale__image-container {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 3%;
 }
@@ -93,7 +98,7 @@
 .house-for-sale__details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 5%;
     white-space: nowrap;
 }
 
