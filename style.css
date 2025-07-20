@@ -16,11 +16,23 @@
     --light-perse: #626687;
     --yellow: #F59E0B;
     --light-light-gray: #E0E3EB;
+    --gradient: linear-gradient(to bottom, rgba(255, 152, 130, 0.5), rgba(255, 250, 130, 0.5));
 }
 
 .page {
     display: flex;
     justify-content: center;
+}
+
+.page__gradient {
+    position: absolute;
+    right: 0;
+    top: 70%;
+    z-index: -10;
+    width: 600px;
+    height: 600px;
+    background: var(--gradient);
+    filter: blur(150px);
 }
 
 .page__content {
@@ -379,6 +391,10 @@
     .button {
         padding: 14px;
     }
+
+    .page__gradient {
+        top: 150%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -434,5 +450,9 @@
 
     .comment_centered {
         justify-content: center;
+    }
+
+    .page__gradient {
+        top: 250%;
     }
 }
