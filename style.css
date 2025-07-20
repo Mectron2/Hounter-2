@@ -383,8 +383,8 @@
 
 .house-for-sale__image-play-button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -473,5 +473,9 @@
 
     .house-for-sale__gradient {
         background: var(--gradient-transparent-70);
+    }
+
+    .house-for-sale__images {
+        height: 400px;
     }
 }
