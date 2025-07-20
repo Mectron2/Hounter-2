@@ -9,7 +9,11 @@
     --blue: #1D4ED8;
     --light-green: #D1FAE5;
     --dark-green: #047857;
-
+    --dark-blue: #1B1C57;
+    --light-gray: #888B97;
+    --mazarine: #0E1735;
+    --perse: #3C4563;
+    --light-perse: #626687;
 }
 
 .page {
@@ -62,6 +66,22 @@
     object-fit: cover;
 }
 
+.house-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.house-card__title {
+    color: var(--mazarine);
+    font-size: 24px;
+}
+
+.house-card__price {
+    color: var(--perse);
+    font-size: 20px;
+}
+
 .people-card__img {
     width: 40px;
     height: 40px;
@@ -74,6 +94,24 @@
     gap: 10px;
 }
 
+.people-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.people-card__name {
+    color: var(--dark-blue);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.people-card__address {
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .house-for-sale__container {
     display: flex;
     align-items: center;
@@ -83,8 +121,15 @@
 }
 
 .house-for-sale__title {
+    color: var(--dark-blue);
     font-size: 32px;
     font-weight: 600;
+}
+
+.house-for-sale__text {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .house-for-sale__images {
@@ -109,6 +154,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2%;
+
+    font-size: 16px;
+    color: var(--perse);
+    font-weight: 400;
     white-space: nowrap;
 }
 
@@ -129,8 +178,16 @@
 .house-for-sale__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     max-width: 550px;
+}
+
+.house-for-sale__description {
+    color: var(--light-perse);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    max-width: 450px;
 }
 
 .house-details__contacts {
