@@ -221,6 +221,7 @@
     bottom: 20px;
     overflow: hidden;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .house-for-sale__image {
@@ -356,11 +357,13 @@
     gap: 20px;
     flex-wrap: wrap-reverse;
     align-items: flex-start;
+    pointer-events: none;
 }
 
 .house-for-sale__interior-image-container {
     border-radius: 8px;
     overflow: hidden;
+    pointer-events: auto;
 }
 
 .house-for-sale__interior-image {
@@ -391,13 +394,8 @@
     backdrop-filter: blur(3px);
 }
 
-.house-for-sale__image-play-button:hover {
-    filter: brightness(110%);
-    cursor: pointer;
-}
-
-.house-for-sale__image-play-button:active {
-    scale: 0.9;
+.house-for-sale__image-container:active {
+    scale: 0.97;
     transition: 0.2s ease-in-out;
 }
 
