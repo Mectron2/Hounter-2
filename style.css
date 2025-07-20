@@ -15,6 +15,7 @@
     --perse: #3C4563;
     --light-perse: #626687;
     --yellow: #F59E0B;
+    --light-light-gray: #E0E3EB;
 }
 
 .page {
@@ -31,9 +32,49 @@
     padding: 60px 30px 60px 30px;
 }
 
-.featured-house {
+.featured-house__header-title {
+    color: var(--dark-blue);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.featured-house__header-control {
     display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.featured-house__comment-wrapper {
+    padding: 0 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.featured-house {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-house__content {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.featured-house__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.featured-house__header-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
 .featured-house__house {
@@ -150,6 +191,7 @@
 .house-for-sale__images {
     height: 450px;
     max-width: 450px;
+    margin: 30px;
 }
 
 .house-for-sale__image-container {
@@ -229,6 +271,16 @@
     border-radius: 32px;
     font-weight: 500;
     white-space: nowrap;
+    border: none;
+}
+
+.button__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
 }
 
 .button:hover {
@@ -255,6 +307,16 @@
     color: var(--dark-green);
 }
 
+.button_gray {
+    border: 1px solid var(--light-light-gray);
+    background-color: white;
+    color: var(--light-gray);
+}
+
+.button_dark-gray {
+    background-color: var(--light-light-gray);
+    color: var(--perse);
+}
 .button_blue {
     background-color: var(--light-blue);
     color: var(--blue);
@@ -271,6 +333,14 @@
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .featured-house__header-nav {
+        gap: 2dvw;
+    }
+
+    .button {
+        padding: 14px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -285,5 +355,46 @@
 
     .house-details__contacts {
         flex-direction: column;
+    }
+
+    .featured-house__header {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .featured-house__header-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+
+    .featured-house__header-nav {
+        gap: 2dvw;
+    }
+
+    .featured-house__header-nav .button__icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .featured-house__header-nav .button {
+        font-size: 12px;
+    }
+
+    .page__content {
+        padding: 30px 10px 30px 10px;
+    }
+
+    .house-for-sale__content {
+        padding: 0 30px 0 30px;
+    }
+
+    .house-for-sale__images {
+        margin: 30px;
+    }
+
+    .comment_centered {
+        justify-content: center;
     }
 }
