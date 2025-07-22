@@ -561,6 +561,7 @@
     font-size: 14px;
     color: var(--light-gray);
     font-weight: 300;
+    align-items: center;
 }
 
 .tip__content {
