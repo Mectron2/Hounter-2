@@ -405,7 +405,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 80px;
+    padding-top: 40px;
     align-items: center;
 }
 
@@ -438,11 +438,9 @@
 }
 
 .review {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 
 .rating {
@@ -462,8 +460,8 @@
     gap: 20px;
     background-color: white;
     border-radius: 20px;
-    position: absolute;
-    bottom: -20%;
+    position: relative;
+    top: -80px;
     padding: 20px;
     width: 80%;
     height: auto;
@@ -476,7 +474,6 @@
 }
 
 .review-count__circle {
-    position: relative;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -489,14 +486,13 @@
 
 .review-count {
     position: absolute;
+    bottom: 30px;
     display: flex;
     gap: 16px;
     z-index: 10;
-    bottom: -25%;
 }
 
 .tips {
-    padding-top: 120px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -515,14 +511,14 @@
 }
 
 .tip__image {
-    width: 50%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 30px;
 }
 
 .tip__image_merged {
-    width: 100%;
+    width: 90%;
     height: 75%;
 }
 
@@ -545,7 +541,6 @@
 .tip_merged {
     grid-row: 1 / 4;
     grid-column: 2;
-    width: 100%;
     height: 100%;
     flex-direction: column-reverse;
     justify-content: center;
@@ -570,10 +565,102 @@
     gap: 30px;
 }
 
-@media (max-width: 1500px) {
+.subscribe__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title_subscribe {
+    max-width: 450px;
+    text-align: center;
+}
+
+.subscribe__form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.form__group {
+    position: relative;
+    width: 100%;
+}
+
+.subscribe__input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.subscribe__button {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+}
+
+.subscribe__container {
+    position: relative;
+    background-image: url("assets/images/subscribe-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 20 / 3;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.subscribe__input {
+    width: 100%;
+    padding: 16px 16px 16px 52px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1440px) {
     .featured-house__houses {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tips__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .tip {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tip__image {
+        height: 500px;
+        width: 500px;
+    }
+
+    .tip__title {
+        text-align: left;
+    }
+
+    .tip_merged {
+        grid-row: 1;
+        grid-column: 1;
+        flex-direction: row-reverse;
+        justify-content: center;
     }
 
     .featured-house__navigation {
@@ -582,6 +669,15 @@
 
     .button {
         padding: 14px;
+    }
+
+    .reviews__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews {
+        padding-top: 0;
     }
 }
 
@@ -625,7 +721,7 @@
     }
 
     .page__content {
-        padding: 30px 10px 30px 10px;
+        padding: 30px;
     }
 
     .house-for-sale__content {
@@ -646,5 +742,20 @@
 
     .house-for-sale__images {
         height: 400px;
+    }
+
+    .tip__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .tip {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tips__grid {
+        gap: 80px;
     }
 }
