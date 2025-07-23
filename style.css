@@ -18,11 +18,24 @@
     --light-light-gray: #E0E3EB;
     --gradient: linear-gradient(to bottom, rgba(255, 152, 130, 1), rgba(255, 250, 130, 1));
     --gradient-transparent-70: linear-gradient(to bottom, rgba(255, 152, 130, 0.7), rgba(255, 250, 130, 0.7));
+    --color-bg-start: #F0FFF4;
+    --color-bg-end:   #EFF6FF;
+    --color-text:     #3C4563;
+    --color-text-dark:#0E1735;
+    --color-text-sm:  #626687;
+    --color-accent:   #10B981;
 }
 
 .page {
     display: flex;
     justify-content: center;
+}
+
+.page__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page__content {
@@ -626,6 +639,98 @@
     box-sizing: border-box;
 }
 
+.footer {
+    background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+    font-family: Lexend, sans-serif;
+    color: var(--color-text);
+    width: 100%;
+}
+
+.footer__container {
+    max-width: 1200px;
+    padding: 60px 30px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer__branding {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__logo-img {
+    display: block;
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-sm);
+}
+
+.footer__social-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer__social-link {
+    font-size: 20px;
+    color: var(--color-text);
+}
+
+.footer__social-link:hover {
+    color: var(--color-accent);
+}
+
+.footer__nav {
+    flex: 3 1 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 150px;
+}
+
+.footer__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--color-text-sm);
+    transition: color .2s;
+}
+
+.footer__link:hover {
+    color: var(--color-accent);
+}
+
+.footer__text {
+    font-size: 14px;
+    color: var(--color-text-sm);
+}
+
 @media (max-width: 1440px) {
     .featured-house__houses {
         width: 100%;
@@ -795,5 +900,29 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+    }
+
+    .footer__branding {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__title {
+        font-size: 32px;
     }
 }
