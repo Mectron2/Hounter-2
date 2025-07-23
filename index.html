@@ -113,8 +113,103 @@
     <symbol id="icon-instagram" viewBox="0 0 32 32">
         <path d="M15.9973 12.6652C14.1611 12.6652 12.6626 14.1638 12.6626 16C12.6626 17.8362 14.1611 19.3348 15.9973 19.3348C17.8335 19.3348 19.332 17.8362 19.332 16C19.332 14.1638 17.8335 12.6652 15.9973 12.6652ZM25.9989 16C25.9989 14.6191 26.0114 13.2506 25.9338 11.8722C25.8563 10.2711 25.4911 8.85017 24.3203 7.67938C23.147 6.50609 21.7286 6.14334 20.1275 6.06579C18.7466 5.98824 17.3782 6.00074 15.9998 6.00074C14.6189 6.00074 13.2505 5.98824 11.8721 6.06579C10.271 6.14334 8.85012 6.50859 7.67935 7.67938C6.50608 8.85267 6.14334 10.2711 6.06579 11.8722C5.98824 13.2531 6.00074 14.6216 6.00074 16C6.00074 17.3784 5.98824 18.7494 6.06579 20.1278C6.14334 21.7289 6.50858 23.1498 7.67935 24.3206C8.85262 25.4939 10.271 25.8567 11.8721 25.9342C13.253 26.0118 14.6214 25.9993 15.9998 25.9993C17.3807 25.9993 18.7491 26.0118 20.1275 25.9342C21.7286 25.8567 23.1495 25.4914 24.3203 24.3206C25.4936 23.1473 25.8563 21.7289 25.9338 20.1278C26.0139 18.7494 25.9989 17.3809 25.9989 16ZM15.9973 21.131C13.1579 21.131 10.8664 18.8394 10.8664 16C10.8664 13.1606 13.1579 10.869 15.9973 10.869C18.8367 10.869 21.1282 13.1606 21.1282 16C21.1282 18.8394 18.8367 21.131 15.9973 21.131ZM21.3383 11.8572C20.6754 11.8572 20.14 11.3218 20.14 10.6589C20.14 9.99594 20.6754 9.46058 21.3383 9.46058C22.0013 9.46058 22.5366 9.99594 22.5366 10.6589C22.5368 10.8163 22.5059 10.9722 22.4458 11.1177C22.3856 11.2632 22.2974 11.3954 22.1861 11.5067C22.0748 11.618 21.9426 11.7062 21.7971 11.7664C21.6516 11.8265 21.4957 11.8574 21.3383 11.8572Z" fill="#3C4563"/>
     </symbol>
+
+    <symbol id="icon-location" viewBox="0 0 24 24">
+        <path d="M12 1C14.3869 1 16.6761 1.99337 18.364 3.76159C20.0518 5.5298 21 7.92801 21 10.4286C21 14.934 18.0975 19.081 12.402 22.8776C12.2818 22.9575 12.1424 23 12 23C11.8576 23 11.7182 22.9575 11.598 22.8776C5.9025 19.081 3 14.934 3 10.4286C3 7.92801 3.94821 5.5298 5.63604 3.76159C7.32387 1.99337 9.61305 1 12 1ZM12 7.28576C11.2044 7.28576 10.4413 7.61689 9.87868 8.20629C9.31607 8.7957 9 9.5951 9 10.4286C9 11.2622 9.31607 12.0616 9.87868 12.651C10.4413 13.2404 11.2044 13.5715 12 13.5715C12.7956 13.5715 13.5587 13.2404 14.1213 12.651C14.6839 12.0616 15 11.2622 15 10.4286C15 9.5951 14.6839 8.7957 14.1213 8.20629C13.5587 7.61689 12.7956 7.28576 12 7.28576Z" fill="#F59E0B"/>
+    </symbol>
 </svg>
-<main class="page__main">
+<div class="page__container">
+    <main class="page__main">
+        <header class="flex-align-center header-wrapper">
+            <div class="flex-row flex-space-between header">
+                <a href="/">
+                    <img src="assets/logo.png" alt="Hounter" class="logo">
+                </a>
+                <div class="header-right">
+                    <div class="flex-row nav-buttons lexend medium-text">
+                        <nav class="flex-row flex-align-center nav-left no-wrap">
+                            <a class="button" href="/about">About Us</a>
+                            <a class="button" href="/article">Article</a>
+                            <div class="dropdown medium-text">
+                                <a class="button" href="/properties">Property ▾</a>
+                                <ul class="dropdown-content">
+                                    <li><a href="/properties/buy">Buy</a></li>
+                                    <li><a href="/properties/rent">Rent</a></li>
+                                    <li><a href="/properties/sell">Sell</a></li>
+                                </ul>
+                            </div>
+                            <a class="button sign-up-button" href="/register">Sign Up!</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero hero-wrapper">
+            <div class="circle"></div>
+            <div class="flex-row flex-align-center flex-space-between content">
+                <div class="flex-column hero-text">
+                    <h1 class="hero-text-title lexend bold-text">
+                        Find The Place To
+                        Live <span class="stroke-text">Your Dreams</span>
+                        Easily Here
+                    </h1>
+                    <p class="lexend thin-text slogan-text">
+                        Everything you need about finding your place to live will be here, where it will be easier for you
+                    </p>
+                    <form class="input-wrapper" action="/search" method="get">
+                        <input type="text" class="search-input lexend thin-text" placeholder="Search for the location you want!">
+                        <button class="search-button lexend medium-text">Search ></button>
+                        <svg class="input__icon" width="24" height="24">
+                            <use href="#icon-location"></use>
+                        </svg>
+                    </form>
+                    <div class="flex-column">
+                        <p class="lexend thin-text partnership-text">Our Partnership</p>
+                        <div class="flex-row flex-space-between flex-align-center partner-logo-wrapper">
+                            <img src="assets/traveloka_logo.png" alt="traveloka" class="partner-logo">
+                            <img src="assets/tiket_logo.png" alt="tiket" class="partner-logo">
+                            <img src="assets/airbnb_logo.png" alt="airbnb" class="partner-logo">
+                            <img src="assets/tripadvisor_logo.png" alt="tripadvisor" class="partner-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-container flex-column">
+                    <div class="achievements-container flex-row achievements-container_wrap">
+                        <div class="achievement flex-row">
+                            <div class="achievement-images-container flex-row">
+                                <img class="achievement-image" src="assets/avatar_1.jpg" alt="avatar 1">
+                                <img class="achievement-image" src="assets/avatar_2.jpg" alt="avatar 2">
+                                <img class="achievement-image" src="assets/avatar_3.jpg" alt="avatar 3">
+
+                            </div>
+                            <div class="achievement-text-container flex-column flex-justify-content">
+                                <p class="lexend medium-text achievement-text achievement-text-heading">1K+ People</p>
+                                <p class="lexend thin-text achievement-text achievement-text-content">Successfully Getting Home</p>
+                            </div>
+                        </div>
+                        <div class="achievement flex-row">
+                            <div class="achievement-images-container flex-row">
+                                <img class="achievement-image" src="assets/house.png" alt="house">
+                            </div>
+                            <div class="achievement-text-container flex-column flex-justify-content">
+                                <p class="lexend medium-text achievement-text achievement-text-heading">56 Houses</p>
+                                <p class="lexend thin-text achievement-text achievement-text-content">Sold Monthly</p>
+                            </div>
+                        </div>
+                        <div class="achievement flex-row">
+                            <div class="achievement-images-container flex-row">
+                                <img class="achievement-image" src="assets/avatar_4.jpg" alt="avatar 1">
+
+                            </div>
+                            <div class="achievement-text-container flex-column flex-justify-content">
+                                <p class="lexend medium-text achievement-text achievement-text-heading">4K+</p>
+                                <p class="lexend thin-text achievement-text achievement-text-content">People Looking for New Homes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="page__content">
             <section class="featured-house">
                 <div class="comment">
@@ -585,71 +680,72 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__branding">
-                    <a href="#" class="footer__logo-link">
-                        <svg class="footer__logo" width="115" height="36" aria-hidden="true">
-                            <use href="#logo"></use>
-                        </svg>
-                    </a>
-                    <p class="footer__description">
-                        We provide information about properties such as houses, villas and apartments to help people find their dream home
-                    </p>
-                    <ul class="footer__social-list">
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
-                                    <use href="#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
-                                    <use href="#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="#" class="footer__social-link">
-                                <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
-                                    <use href="#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__branding">
+                <a href="#" class="footer__logo-link">
+                    <svg class="footer__logo" width="115" height="36" aria-hidden="true">
+                        <use href="#logo"></use>
+                    </svg>
+                </a>
+                <p class="footer__description">
+                    We provide information about properties such as houses, villas and apartments to help people find their dream home
+                </p>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
+                                <use href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
+                                <use href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-link-icon" width="32" height="32" aria-hidden="true">
+                                <use href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__nav">
+                <div class="footer__column">
+                    <h3 class="footer__title">Property</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">House</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Apartment</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Villa</a></li>
                     </ul>
                 </div>
-
-                <div class="footer__nav">
-                    <div class="footer__column">
-                        <h3 class="footer__title">Property</h3>
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">House</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Apartment</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Villa</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__column">
-                        <h3 class="footer__title">Article</h3>
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">New Article</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Popular Article</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Most Read</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Tips &amp; Tricks</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__column">
-                        <h3 class="footer__title">Contact</h3>
-                        <ul class="footer__list">
-                            <li class="footer__item"><span class="footer__text">2464 Royal Ln. Mesa, New Jersey 45463</span></li>
-                            <li class="footer__item"><span class="footer__text">(671) 555-0110</span></li>
-                            <li class="footer__item"><span class="footer__text">info@hounter.com</span></li>
-                        </ul>
-                    </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Article</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">New Article</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Popular Article</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Most Read</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Tips &amp; Tricks</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><span class="footer__text">2464 Royal Ln. Mesa, New Jersey 45463</span></li>
+                        <li class="footer__item"><span class="footer__text">(671) 555-0110</span></li>
+                        <li class="footer__item"><span class="footer__text">info@hounter.com</span></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-</main>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
