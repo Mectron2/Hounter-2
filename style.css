@@ -409,10 +409,6 @@
     align-items: center;
 }
 
-.comment_column {
-    flex-direction: column;
-}
-
 .title_comment {
     font-size: 20px;
 }
@@ -637,8 +633,9 @@
     }
 
     .tips__grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .tip {
@@ -648,8 +645,7 @@
     }
 
     .tip__image {
-        height: 500px;
-        width: 500px;
+        max-width: 500px;
     }
 
     .tip__title {
@@ -657,8 +653,6 @@
     }
 
     .tip_merged {
-        grid-row: 1;
-        grid-column: 1;
         flex-direction: row-reverse;
         justify-content: center;
     }
@@ -684,6 +678,14 @@
 @media (max-width: 768px) {
     .featured-house__houses, .house-details {
         grid-template-columns: 1fr;
+    }
+
+    .featured-house__comment-wrapper {
+        padding: 0;
+    }
+
+    .title {
+        text-align: center;
     }
 
     .house-for-sale__container {
@@ -722,14 +724,36 @@
 
     .page__content {
         padding: 30px;
+        gap: 60px;
+    }
+
+    .tip__content {
+        gap: 15px;
     }
 
     .house-for-sale__content {
-        padding: 0 30px 0 30px;
+        padding: 0;
+    }
+
+    .house-for-sale__interior-image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .house-for-sale__interior-image {
+        display: none;
     }
 
     .house-for-sale__images {
-        margin: 30px 60px 60px 30px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .house-for-sale__image-container {
+        position: static;
     }
 
     .comment_centered {
@@ -740,22 +764,36 @@
         background: var(--gradient-transparent-70);
     }
 
-    .house-for-sale__images {
-        height: 400px;
+    .house-card__img-container {
+        width: 100%;
+        height: auto;
     }
 
     .tip__image {
         width: 100%;
         height: auto;
+        border-radius: 15px;
     }
 
     .tip {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     .tips__grid {
-        gap: 80px;
+        gap: 40px;
+    }
+
+    .subscribe__container {
+        background: none;
+        border-radius: 0;
+    }
+
+    .comment {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
