@@ -663,8 +663,8 @@
 }
 
 .review__image-container {
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -755,6 +755,10 @@
     max-width: 500px;
 }
 
+.tip__description {
+    text-align: left;
+}
+
 .tip__image {
     width: 100%;
     height: auto;
@@ -793,6 +797,7 @@
 
 .tip__title {
     font-size: 18px;
+    color: var(--perse);
 }
 
 .date {
@@ -1012,13 +1017,25 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .review__image-container {
+        max-width: 60%;
+        width: 60%;
+        height: auto;
+    }
+
+    .review__comment {
+        width: 50%;
+    }
+
     .tips__grid {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .tip {
+        padding: 0;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -1034,11 +1051,14 @@
 
     .tip_merged {
         flex-direction: row-reverse;
-        justify-content: center;
     }
 
     .featured-house__navigation {
         gap: 2dvw;
+    }
+
+    .search__button {
+        right: 4px;
     }
 
     .button {
@@ -1058,11 +1078,11 @@
 @media (max-width: 768px) {
     .hero {
         height: auto;
-        padding: 80px 0 0 0;
+        padding: 120px 0 0 0;
     }
 
     .hero__layout {
-        padding: 30px;
+        padding: 0 30px 0 30px;
     }
 
     .hero__circle {
@@ -1079,6 +1099,7 @@
 
     .hero__slogan {
         font-size: 16px;
+        text-align: center;
     }
 
     .search__input {
@@ -1105,9 +1126,9 @@
     }
 
     .hero__partners {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
 
     .achievements__list {
@@ -1171,6 +1192,16 @@
         padding: 0;
     }
 
+    .review__image-container {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .review__comment {
+        width: 85%;
+    }
+
     .house-for-sale__interior-image-container {
         width: 100%;
         height: auto;
@@ -1220,6 +1251,11 @@
 
     .tips__grid {
         gap: 40px;
+        align-items: center;
+    }
+
+    .tip__description {
+        display: none;
     }
 
     .subscribe__container {
