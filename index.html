@@ -131,15 +131,18 @@
                     <a class="button button_nav-link" href="#">About Us</a>
                     <a class="button button_nav-link" href="#">Article</a>
                     <div class="nav__dropdown">
-                        <a class="button button_nav-link">Property ▾</a>
+                        <a class="button button_nav-link button_dropdown">Property ▾</a>
                         <ul class="nav__dropdown-list">
+                            <li class="nav__dropdown-item nav__dropdown-item_hidden"><a href="#">About Us</a></li>
+                            <li class="nav__dropdown-item nav__dropdown-item_hidden"><a href="#">Article</a></li>
+                            <li class="nav__dropdown-item nav__dropdown-item_hidden"><a href="#">Sign Up!</a></li>
                             <li class="nav__dropdown-item"><a href="#">Buy</a></li>
                             <li class="nav__dropdown-item"><a href="#">Rent</a></li>
                             <li class="nav__dropdown-item"><a href="#">Sell</a></li>
                         </ul>
                     </div>
                 </div>
-                <a class="button button_signup" href="/register">Sign Up!</a>
+                <a class="button button_nav-link button_signup" href="#">Sign Up!</a>
             </nav>
         </div>
     </header>
@@ -157,7 +160,7 @@
                         Everything you need about finding your place to live will be here, where it will be easier for you
                     </p>
 
-                    <form class="search" action="/search" method="get">
+                    <form class="search" action="#" method="get">
                         <div class="search__field">
                             <input
                                     class="search__input"
@@ -237,7 +240,7 @@
                     <p class="comment__text">Our Recommendation</p>
                 </div>
                 <div class="featured-house__comment-wrapper">
-                    <header class="featured-house__header">
+                    <div class="featured-house__header">
                         <h2 class="title">Featured House</h2>
                         <nav class="featured-house__navigation">
                             <ul class="nav-list">
@@ -293,7 +296,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </header>
+                    </div>
                     <div class="featured-house__content">
                         <ul class="featured-house__houses">
                             <li class="featured-house__house">

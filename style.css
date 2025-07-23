@@ -150,6 +150,7 @@
     position: relative;
     height: 900px;
 }
+
 .hero__circle {
     position: absolute;
     top: 0;
@@ -168,7 +169,9 @@
     height: 100%;
     padding-left: 40px;
 }
+
 .hero__text-block { max-width: 600px; display: flex; flex-direction: column; gap: 32px; }
+
 .hero__title {
     margin: 0;
     font-size: 60px;
@@ -176,10 +179,12 @@
     font-weight: 900;
     color: #1B1C57;
 }
+
 .hero__highlight {
     color: white;
     text-shadow: 1px 0 #1B1C57, -1px 0 #1B1C57, 0 1px #1B1C57, 0 -1px #1B1C57;
 }
+
 .hero__slogan {
     margin: 0;
     font-family: "Lexend", sans-serif;
@@ -187,7 +192,6 @@
     color: #888B97;
 }
 
-/* Search */
 .search {
     display: flex;
     align-items: center;
@@ -333,6 +337,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.nav__dropdown-item_hidden {
+    display: none;
 }
 
 .nav-list_control {
@@ -959,7 +967,46 @@
     color: var(--color-text-sm);
 }
 
-@media (max-width: 1440px) {
+.button_dropdown {
+    display: block;
+}
+
+@media (max-width: 1439px) {
+    .hero__layout {
+        padding: 40px 0 0 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 100dvh;
+    }
+
+    .hero__title {
+        text-align: center;
+    }
+
+    .hero__image-block {
+        justify-content: center;
+        width: 100%;
+        background: none;
+        height: auto;
+    }
+
+    .achievements__list {
+        flex-wrap: nowrap;
+    }
+
+    .button_nav-link {
+        background-color: var(--light-green);
+        color: var(--dark-green);
+    }
+
+    .button_signup {
+        background-color: var(--color-accent);
+        color: white;
+    }
+
     .featured-house__houses {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
@@ -1009,6 +1056,69 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 80px 0 0 0;
+    }
+
+    .hero__layout {
+        padding: 30px;
+    }
+
+    .hero__circle {
+        width: 100%;
+    }
+
+    .hero__image-block {
+        padding: 30px;
+    }
+
+    .hero__title {
+        font-size: 48px;
+    }
+
+    .hero__slogan {
+        font-size: 16px;
+    }
+
+    .search__input {
+        font-size: 16px;
+    }
+
+    .nav__dropdown-item_hidden {
+        display: block;
+    }
+
+    .button_nav-link {
+        display: none;
+    }
+
+    .button_dropdown {
+        display: block;
+        background-color: var(--color-accent);
+        color: white;
+    }
+
+    .hero__partnership {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__partners {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .achievements__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .achievements__item {
+        width: 100%;
+    }
+
     .featured-house__houses, .house-details {
         grid-template-columns: 1fr;
     }
@@ -1033,13 +1143,6 @@
     .featured-house__header {
         flex-direction: column;
         gap: 20px;
-    }
-
-    .nav-list_control {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 10;
     }
 
     .featured-house__navigation {
