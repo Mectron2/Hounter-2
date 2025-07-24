@@ -1003,7 +1003,7 @@
     }
 
     .hero {
-        height: 100dvh;
+        height: auto;
     }
 
     .hero__title {
