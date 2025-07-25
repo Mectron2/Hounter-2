@@ -337,6 +337,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .featured-house__header {
@@ -362,17 +365,19 @@
 }
 
 .featured-house__house {
-    max-width: 340px;
+    flex: 0 0 25%;
     place-self: center;
 }
 
 .featured-house__houses {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.5s ease;
 }
 
 .house-card {
+    padding: 4%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -381,7 +386,6 @@
 .house-card__img-container {
     position: relative;
     height: 382px;
-    max-width: 340px;
     overflow: hidden;
     border-radius: 32px;
 }
@@ -1032,6 +1036,8 @@
     }
 
     .featured-house__houses {
+        display: grid;
+        gap: 40px;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1091,6 +1097,11 @@
 
     .reviews {
         padding-top: 0;
+    }
+
+    .house-card__img-container {
+        width: auto;
+        max-width: 340px;
     }
 }
 
