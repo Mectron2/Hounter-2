@@ -591,15 +591,15 @@
     color: var(--red);
 }
 
-.button_secondary {
-    background-color: var(--light-green);
-    color: var(--dark-green);
-}
-
 .button_inactive {
     border: 1px solid var(--light-light-gray);
     background-color: white;
     color: var(--light-gray);
+}
+
+.button_secondary {
+    background-color: var(--light-green);
+    color: var(--dark-green);
 }
 
 .button_inactive-dark {

@@ -37,3 +37,33 @@ nextBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', recalc);
+
+const buttons = document.querySelectorAll('.button_featured-house');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        buttons.forEach((btn) => {
+            btn.classList.remove('button_secondary');
+            btn.classList.add('button_inactive');
+        });
+
+        button.classList.add('button_secondary');
+        button.classList.remove('button_inactive');
+
+        const type = button.outerText;
+
+        switch (type) {
+            case 'House':
+                console.log("Houses");
+                break;
+            case 'Villa':
+                console.log("Villas");
+                break;
+            case 'Apartment':
+                console.log("Apartment");
+                break;
+            default:
+                console.log(`Unknown type ${type}`);
+        }
+    });
+});
