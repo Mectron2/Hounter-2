@@ -364,16 +364,31 @@
     gap: 8px;
 }
 
-.featured-house__house {
+.featured-house__element {
     flex: 0 0 25%;
     place-self: center;
+}
+
+.featured-house__slider {
+    transition: transform 0.5s ease;
 }
 
 .featured-house__houses {
     position: relative;
     display: flex;
     align-items: flex-start;
-    transition: transform 0.5s ease;
+}
+
+.featured-house__villas {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.featured-house__apartments {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
 }
 
 .house-card {
@@ -999,6 +1014,10 @@
     display: block;
 }
 
+.featured-house__hidden {
+    display: none !important;
+}
+
 @media (max-width: 1439px) {
     .hero__layout {
         padding: 120px 0 0 0;
@@ -1035,7 +1054,7 @@
         color: white;
     }
 
-    .featured-house__houses {
+    .featured-house__houses, .featured-house__villas, .featured-house__apartments {
         display: grid;
         gap: 40px;
         width: 100%;

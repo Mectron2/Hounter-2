@@ -1,15 +1,24 @@
-const track = document.querySelector('.featured-house__houses');
+const houseContainer = document.querySelector('.featured-house__houses');
+const villaContainer = document.querySelector('.featured-house__villas');
+const apartmentContainer = document.querySelector('.featured-house__apartments');
+const containers = [houseContainer, villaContainer, apartmentContainer];
+
+const track = document.querySelector('.featured-house__slider');
 const prevBtn = document.querySelector('.button_prev');
 const nextBtn = document.querySelector('.button_next');
-const items = document.querySelectorAll('.featured-house__house');
+const items = document.querySelectorAll('.featured-house__element');
+let itemWidth = Math.max(
+    ...Array.from(items, el => el.clientWidth)
+);
 const visible = 4;
-let itemWidth = items[0].clientWidth;
 let current = 0;
-let maxIndex = items.length - visible;
+let maxIndex = (items.length / containers.length) - visible;
 
 function recalc() {
-    itemWidth = items[0].clientWidth;
-    maxIndex = items.length - visible;
+    itemWidth = Math.max(
+        ...Array.from(items, el => el.clientWidth)
+    );
+    maxIndex = (items.length / 3) - visible;
     update();
 }
 
@@ -36,12 +45,20 @@ nextBtn.addEventListener('click', () => {
     update();
 });
 
-window.addEventListener('resize', recalc);
+window.addEventListener('resize', () => {
+    recalc();
+    if (window.innerWidth < 1440) {
+        current = 0;
+        update();
+    }
+});
 
 const buttons = document.querySelectorAll('.button_featured-house');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        current = 0;
+        update();
         buttons.forEach((btn) => {
             btn.classList.remove('button_secondary');
             btn.classList.add('button_inactive');
@@ -54,13 +71,31 @@ buttons.forEach((button) => {
 
         switch (type) {
             case 'House':
-                console.log("Houses");
+                for (const container of containers) {
+                    if (container !== houseContainer) {
+                        container.classList.add('featured-house__hidden');
+                    } else {
+                        container.classList.remove('featured-house__hidden');
+                    }
+                }
                 break;
             case 'Villa':
-                console.log("Villas");
+                for (const container of containers) {
+                    if (container !== villaContainer) {
+                        container.classList.add('featured-house__hidden');
+                    } else {
+                        container.classList.remove('featured-house__hidden');
+                    }
+                }
                 break;
             case 'Apartment':
-                console.log("Apartment");
+                for (const container of containers) {
+                    if (container !== apartmentContainer) {
+                        container.classList.add('featured-house__hidden');
+                    } else {
+                        container.classList.remove('featured-house__hidden');
+                    }
+                }
                 break;
             default:
                 console.log(`Unknown type ${type}`);
